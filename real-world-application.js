@@ -65,3 +65,24 @@ var crayola1990 = [
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
  * there are multiple ways to do something like this but you might consider using split and join
  */ 
+ 
+ function crayonIterator(crayonArray) {
+   var iteratedArray = []
+
+   for (var i = 0; i < crayonArray.length; i++) {
+     var crayon = crayonArray[i].split(" ")
+     var crayonName = ""
+     for (var j = 0; j < crayon.length; j++) {
+       var word = crayon[j].toLowerCase()
+       if (j > 0) {
+         crayonName += "-"
+       }
+       crayonName += word
+     }
+     iteratedArray += crayon;
+     console.log(crayonName)
+   }
+   
+ }
+ 
+ crayonIterator(crayola1990)
